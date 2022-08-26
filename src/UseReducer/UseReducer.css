@@ -1,0 +1,12 @@
+button{
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    display: block;
+    border: 1px solid skyblue;
+    outline: none;
+    margin: 10px auto;
+    border-radius: 5px;
+    font-size: 14px;
+    
+}
