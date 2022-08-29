@@ -1,18 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
 import UseReducer from './UseReducer/UseReducer';
+import {useSelector,useDispatch}from 'react-redux'
+import {decrement,increment} from '../src/Redux/Actions/Action.jsx'
 
 function App() {
+  const myState = useSelector((state)=> state.changeNumber)
+  const dispatch = useDispatch()
   return (
     <div className="App">
       {/* <UseReducer/> */}
       <h3 style={{ color: "skyblue", fontSize: "50px" }}>Welcome To Redux</h3>
-      <h3>0</h3>
+      <h3>{myState}</h3>
       <div>
-        <button >
+        <button onClick={()=>{dispatch(increment())}}>
           Increment
         </button>
-        <button >
+        <button onClick={()=>{dispatch(decrement())}}>
           Decrement
         </button>
       </div>
